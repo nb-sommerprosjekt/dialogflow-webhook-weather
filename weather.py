@@ -31,7 +31,10 @@ def processRequest(req):
     speech = "Dette fungerer. Jeg er Nancy og jeg lever"    
     return {
   "fulfillmentText": "Dette er en tekst-respons",
-  "textToSpeech": "Dette er en tekst-respons"
+     "simpleResponse": {
+              "textToSpeech": "dette er en talerespons "
+            }
+
         }
     
 if __name__ == '__main__':
