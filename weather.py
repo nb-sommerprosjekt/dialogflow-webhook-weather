@@ -30,13 +30,7 @@ def processRequest(req):
 
     speech = "Dette fungerer. Jeg er Nancy og jeg lever"    
     return {
-  "fulfillmentText: Dette er en tekst-respons,
-     simpleResponse: {
-              textToSpeech: dette er en talerespons 
-            }
-
-        }"
-    
+  "fulfillmentText": "Dette er en tekst-respons"}
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
     print("Starting app on port %d" % port)
