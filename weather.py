@@ -11,7 +11,7 @@ app = Flask(__name__)
 @app.route('/webhook', methods=['POST'])
 def webhook():
     req = request.get_json(silent=True, force=True)
-
+    print(req)
     print("Request:")
     print(json.dumps(req, indent=4))
     
@@ -30,9 +30,8 @@ def processRequest(req):
 
     speech = "Dette fungerer. Jeg er Nancy og jeg lever"    
     return {
-        "speech": speech,
-        "displayText": speech,
-        "source": "dialogflow-weather-by-satheshrgs"
+  "fulfillmentText": "Dette er en tekst-respons",
+  "textToSpeech": "Dette er en tekst-respons"
         }
     
 if __name__ == '__main__':
